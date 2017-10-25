@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <stdbool.h>
 int S[26][26] =
 /* A B C D E F G H I J K L M N O P Q R S T U V W X Y Z */
 {/* A */{ 4,-2, 0,-2,-1,-2, 0,-2,-1, 0,-1,-1,-1,-2, 0,-1,-1,-1, 1, 0, 0, 0,-3, 0,-2,-1},
@@ -33,5 +35,3 @@ int S[26][26] =
 };
 
 char residues[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-
