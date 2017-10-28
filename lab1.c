@@ -11,10 +11,11 @@ int tmax(int a, int b, int c){
 
 void *calc(void *t){
     int id = (intptr_t)t;
+    int k;
     for (int i=id; i<len; i += thread_number){
         //printf("%d-%d\n", id, i);
         for (int j=1; j<len; j++){
-            while (!vis[j][i-1]);
+            while (!vis[j][i-1]) k++;
             M[j][i] = tmax(
                 M[j-1][i-1] + S[(j-1)%26][(i-1)%26],
                 r[j] + d,
